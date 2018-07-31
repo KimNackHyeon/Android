@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        FragmentManager manager = getFragmentManager();
+        android.app.FragmentManager manager = getFragmentManager();
 
         if (id == R.id.nav_first_layout) {
             // Handle the camera action
