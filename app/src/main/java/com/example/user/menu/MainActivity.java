@@ -81,21 +81,19 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        android.app.FragmentManager manager = getFragmentManager();
+        FragmentManager manager = getFragmentManager();
 
         if (id == R.id.nav_first_layout) {
-            // Handle the camera action
             manager.beginTransaction().replace(R.id.content_main, new FirstLayout()).commit();
         } else if (id == R.id.nav_second_layout) {
             manager.beginTransaction().replace(R.id.content_main, new SecondLayout()).commit();
-
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
